@@ -1348,11 +1348,16 @@ input, select, textarea {
         display: flex;
     }
 
+    .hamburger .bar {
+        background: var(--text);
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
         width: 280px;
+        height: 100dvh;
         height: 100vh;
         background: var(--white);
         flex-direction: column;
@@ -1361,6 +1366,8 @@ input, select, textarea {
         gap: 0;
         box-shadow: -4px 0 24px rgba(0,0,0,0.15);
         transition: right var(--transition);
+        z-index: 1000;
+        overflow-y: auto;
     }
 
     .nav-links.active {
@@ -1368,7 +1375,7 @@ input, select, textarea {
     }
 
     .nav-link {
-        padding: 12px 0;
+        padding: 16px 0;
         font-size: 1.05rem;
         width: 100%;
         border-bottom: 1px solid var(--border);
@@ -1379,15 +1386,17 @@ input, select, textarea {
     }
 
     .nav-cta-link {
-        margin-top: 16px;
+        margin-top: 20px;
         text-align: center;
         display: block;
+        padding: 14px 24px;
+        border-radius: var(--radius-sm);
     }
 
     /* Hero */
     .hero {
         min-height: auto;
-        padding: 120px 0 80px;
+        padding: 120px 16px 80px;
     }
 
     .hero-stats {
@@ -1438,6 +1447,11 @@ input, select, textarea {
     /* Mobile CTA */
     .mobile-cta {
         display: flex;
+    }
+
+    .mobile-cta .btn-block {
+        width: auto;
+        flex: 1;
     }
 
     body {
